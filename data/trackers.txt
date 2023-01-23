@@ -1,0 +1,13 @@
+AlphaRatio|https://alpharatio.cc/register|Sorry, the site is currently invite only.
+AsianCinema|https://asiancinema.me/register/null|Open Registration is Closed!
+AvistaZ|https://avistaz.to/auth/register|AvistaZ is Invite Only
+BeyondHD|https://beyond-hd.me/register|You Must Be Invited To Register!
+BroadcastTheNet|https://broadcasthe.net/register.php|Sorry, the site is currently invite only.
+CHDBits|https://chdbits.co/signup.php|自由注册当前关闭，只允许邀请注册
+CinemaZ|https://cinemaz.to/auth/register|We sometimes open registration or application.
+DanishBytes|https://danishbytes.club/register|Åben registrering er deaktiveret
+ExoticaZ|https://exoticaz.to/register|ExoticaZ is Invite Only
+PrivateHD|https://privatehd.to/auth/register|PrivateHD is Invite Only
+The Horror Charnel|https://horrorcharnel.org/signup.php|The site has been set to invite only by the staff
+Aither|https://aither.cc/register/|Open Registration Is Disabled and You Will Need A Invite To Gain Access!
+PassThePopcorn|https://passthepopcorn.me/register.php|Sorry, the site is currently invite only.
