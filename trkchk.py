@@ -16,11 +16,11 @@ MENU = [
 
 # Logo
 def displayLogo():
-    print('████████ ██████  ██   ██  ██████ ██   ██ ██   ██'); 
-    print('   ██    ██   ██ ██  ██  ██      ██   ██ ██  ██ '); 
-    print('   ██    ██████  █████   ██      ███████ █████  '); 
-    print('   ██    ██   ██ ██  ██  ██      ██   ██ ██  ██ '); 
-    print('   ██    ██   ██ ██   ██  ██████ ██   ██ ██   ██');
+    print('▄▄▄▄▄▄▄▄  ▄ •▄  ▄▄·  ▄ .▄▄ •▄ '); 
+    print('•██  ▀▄ █·█▌▄▌▪▐█ ▌▪██▪▐██▌▄▌▪'); 
+    print(' ▐█.▪▐▀▀▄ ▐▀▀▄·██ ▄▄██▀▐█▐▀▀▄·'); 
+    print(' ▐█▌·▐█•█▌▐█.█▌▐███▌██▌▐▀▐█.█▌'); 
+    print(' ▀▀▀ .▀  ▀·▀  ▀·▀▀▀ ▀▀▀ ··▀  ▀');
     print('-------------------------------------------------');
 
 
@@ -55,9 +55,6 @@ def listTrackers():
         for line in lines:
             line = line.strip()
             tracker = line.split('|')
-            trackerName = tracker[0]
-            trackerUrl = tracker[1]
-            trackerText = tracker[2]
             rows.append([str(i), tracker[0], tracker[1], tracker[2]])
             i = i + 1
 
@@ -85,9 +82,6 @@ def checkForOpenSignups():
         for line in lines:
             line = line.strip()
             tracker = line.split('|')
-            trackerName = tracker[0]
-            trackerUrl = tracker[1]
-            trackerText = tracker[2]
             trackers.append([tracker[0], tracker[1], tracker[2]])
     
     # Check each tracker
