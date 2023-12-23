@@ -11,7 +11,8 @@ MENU = [
     { 'item': 2, 'name': 'List trackers', 'function': 'listTrackers' },
     { 'item': 3, 'name': 'Add a tracker to the list', 'function': 'addTrackerToFile' },
     { 'item': 4, 'name': 'Remove a tracker from the list', 'function': 'removeTrackerFromFile' },
-    { 'item': 5, 'name': 'Exit', 'function': 'exit' }
+    { 'item': 5, 'name': 'Open trackers.txt', 'function': 'openTrackerFile'},
+    { 'item': 6, 'name': 'Exit', 'function': 'exit' }
 ]
 
 # Logo
@@ -27,7 +28,7 @@ def displayLogo():
 # Menu + input
 def getMenuInput():
     for menuItem in MENU:
-        print('[' + str(menuItem['item']) + '] ' + menuItem['name'])
+        print(colored('[' + str(menuItem['item']) + '] ', 'yellow') + menuItem['name'])
     userInput = input('> ')
     print('\n')
     return userInput
@@ -72,7 +73,7 @@ def checkForOpenSignups():
 
     checkTrackerFileStatus()
 
-    print('[CHECKING FOR OPEN SIGNUPS]')
+    print(colored('[CHECKING FOR OPEN SIGNUPS]', 'cyan'))
     trackers = []
 
     # Open the file and read the trackers into an array
@@ -105,7 +106,7 @@ def checkForOpenSignups():
 # Add tracker to file
 def addTrackerToFile():
 
-    print('[ADD TRACKER TO LIST]')
+    print(colored('[ADD TRACKER TO LIST]', 'cyan'))
     tracker = input('Tracker name: ')
     url = input('Tracker registration URL: ')
     text = input('Text to look for: ')
@@ -121,7 +122,7 @@ def removeTrackerFromFile():
 
     checkTrackerFileStatus()
 
-    print('[REMOVE TRACKER FROM LIST]')
+    print(colored('[REMOVE TRACKER FROM LIST]', 'cyan'))
     listTrackers()
     trackerInput = input('Tracker ID: ')
 
@@ -142,6 +143,9 @@ def removeTrackerFromFile():
 
     print(colored('Tracker removed!', 'green'))
 
+def openTrackerFile():
+    os.system('start ' + TRACKER_FILE)
+
 # Logo
 displayLogo()
 
@@ -153,10 +157,9 @@ while True:
     # Check if the user entered a valid number
     if userInput.isdigit():
         userInput = int(userInput)
-        if userInput == 5:
+        if userInput == 6:
             exit()
         if userInput > 0 and userInput <= len(MENU):
             locals()[MENU[userInput - 1]['function']]()
         else:
             print(colored('[ERROR]', 'red') + ' Invalid menu item!')
-            input('Press enter to exit...')
